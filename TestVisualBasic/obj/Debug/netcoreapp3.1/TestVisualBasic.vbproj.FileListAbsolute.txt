@@ -1,0 +1,11 @@
+C:\ProjectsSandbox\AnalyzerDev\TestVisualBasic\bin\Debug\netcoreapp3.1\TestVisualBasic.exe
+C:\ProjectsSandbox\AnalyzerDev\TestVisualBasic\bin\Debug\netcoreapp3.1\TestVisualBasic.deps.json
+C:\ProjectsSandbox\AnalyzerDev\TestVisualBasic\bin\Debug\netcoreapp3.1\TestVisualBasic.runtimeconfig.json
+C:\ProjectsSandbox\AnalyzerDev\TestVisualBasic\bin\Debug\netcoreapp3.1\TestVisualBasic.runtimeconfig.dev.json
+C:\ProjectsSandbox\AnalyzerDev\TestVisualBasic\bin\Debug\netcoreapp3.1\TestVisualBasic.dll
+C:\ProjectsSandbox\AnalyzerDev\TestVisualBasic\bin\Debug\netcoreapp3.1\TestVisualBasic.pdb
+C:\ProjectsSandbox\AnalyzerDev\TestVisualBasic\obj\Debug\netcoreapp3.1\TestVisualBasic.vbprojAssemblyReference.cache
+C:\ProjectsSandbox\AnalyzerDev\TestVisualBasic\obj\Debug\netcoreapp3.1\TestVisualBasic.AssemblyInfoInputs.cache
+C:\ProjectsSandbox\AnalyzerDev\TestVisualBasic\obj\Debug\netcoreapp3.1\TestVisualBasic.AssemblyInfo.vb
+C:\ProjectsSandbox\AnalyzerDev\TestVisualBasic\obj\Debug\netcoreapp3.1\TestVisualBasic.dll
+C:\ProjectsSandbox\AnalyzerDev\TestVisualBasic\obj\Debug\netcoreapp3.1\TestVisualBasic.pdb

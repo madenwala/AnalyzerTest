@@ -1,0 +1,12 @@
+C:\ProjectsSandbox\AnalyzerDev\AnalyzerDev\obj\Debug\netstandard1.3\AnalyzerDev.csprojAssemblyReference.cache
+C:\ProjectsSandbox\AnalyzerDev\AnalyzerDev\obj\Debug\netstandard1.3\AnalyzerDev.Resources.resources
+C:\ProjectsSandbox\AnalyzerDev\AnalyzerDev\obj\Debug\netstandard1.3\AnalyzerDev.csproj.GenerateResource.cache
+C:\ProjectsSandbox\AnalyzerDev\AnalyzerDev\obj\Debug\netstandard1.3\AnalyzerDev.AssemblyInfoInputs.cache
+C:\ProjectsSandbox\AnalyzerDev\AnalyzerDev\obj\Debug\netstandard1.3\AnalyzerDev.AssemblyInfo.cs
+C:\ProjectsSandbox\AnalyzerDev\AnalyzerDev\bin\Debug\netstandard1.3\tools\install.ps1
+C:\ProjectsSandbox\AnalyzerDev\AnalyzerDev\bin\Debug\netstandard1.3\tools\uninstall.ps1
+C:\ProjectsSandbox\AnalyzerDev\AnalyzerDev\bin\Debug\netstandard1.3\AnalyzerDev.deps.json
+C:\ProjectsSandbox\AnalyzerDev\AnalyzerDev\bin\Debug\netstandard1.3\AnalyzerDev.dll
+C:\ProjectsSandbox\AnalyzerDev\AnalyzerDev\bin\Debug\netstandard1.3\AnalyzerDev.pdb
+C:\ProjectsSandbox\AnalyzerDev\AnalyzerDev\obj\Debug\netstandard1.3\AnalyzerDev.dll
+C:\ProjectsSandbox\AnalyzerDev\AnalyzerDev\obj\Debug\netstandard1.3\AnalyzerDev.pdb

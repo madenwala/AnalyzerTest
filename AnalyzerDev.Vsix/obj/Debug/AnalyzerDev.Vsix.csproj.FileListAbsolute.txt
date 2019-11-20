@@ -1,0 +1,16 @@
+C:\ProjectsSandbox\AnalyzerDev\AnalyzerDev.Vsix\bin\Debug\tools\install.ps1
+C:\ProjectsSandbox\AnalyzerDev\AnalyzerDev.Vsix\bin\Debug\tools\uninstall.ps1
+C:\ProjectsSandbox\AnalyzerDev\AnalyzerDev.Vsix\bin\Debug\AnalyzerDev.vsix
+C:\ProjectsSandbox\AnalyzerDev\AnalyzerDev.Vsix\bin\Debug\extension.vsixmanifest
+C:\ProjectsSandbox\AnalyzerDev\AnalyzerDev.Vsix\bin\Debug\AnalyzerDev.dll
+C:\ProjectsSandbox\AnalyzerDev\AnalyzerDev.Vsix\bin\Debug\System.Collections.Immutable.dll
+C:\ProjectsSandbox\AnalyzerDev\AnalyzerDev.Vsix\bin\Debug\AnalyzerDev.pdb
+C:\ProjectsSandbox\AnalyzerDev\AnalyzerDev.Vsix\obj\Debug\AnalyzerDev.Vsix.csprojAssemblyReference.cache
+C:\ProjectsSandbox\AnalyzerDev\AnalyzerDev.Vsix\obj\Debug\_EmptyResource.resources
+C:\ProjectsSandbox\AnalyzerDev\AnalyzerDev.Vsix\obj\Debug\AnalyzerDev.Vsix.csproj.GenerateResource.cache
+C:\ProjectsSandbox\AnalyzerDev\AnalyzerDev.Vsix\obj\Debug\AnalyzerDev.Vsix.csproj.CopyComplete
+C:\ProjectsSandbox\AnalyzerDev\AnalyzerDev.Vsix\obj\Debug\AnalyzerDev.dll
+C:\ProjectsSandbox\AnalyzerDev\AnalyzerDev.Vsix\obj\Debug\AnalyzerDev.pdb
+C:\ProjectsSandbox\AnalyzerDev\AnalyzerDev.Vsix\obj\Debug\extension.vsixmanifest
+C:\ProjectsSandbox\AnalyzerDev\AnalyzerDev.Vsix\obj\Debug\files.json
+C:\ProjectsSandbox\AnalyzerDev\AnalyzerDev.Vsix\obj\Debug\createTemplateManifests.cache

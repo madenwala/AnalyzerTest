@@ -1,0 +1,3 @@
+C:\ProjectsSandbox\AnalyzerDev\AnalyzerDev.Test\obj\Debug\netcoreapp2.0\AnalyzerDev.Test.csprojAssemblyReference.cache
+C:\ProjectsSandbox\AnalyzerDev\AnalyzerDev.Test\obj\Debug\netcoreapp2.0\AnalyzerDev.Test.AssemblyInfoInputs.cache
+C:\ProjectsSandbox\AnalyzerDev\AnalyzerDev.Test\obj\Debug\netcoreapp2.0\AnalyzerDev.Test.AssemblyInfo.cs

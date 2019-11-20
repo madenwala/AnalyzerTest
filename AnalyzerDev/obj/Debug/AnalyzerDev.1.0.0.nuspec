@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>AnalyzerDev</id>
+    <version>1.0.0</version>
+    <authors>adenw</authors>
+    <owners>adenw</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>http://license_url_here_or_delete_this_line/</licenseUrl>
+    <projectUrl>http://project_url_here_or_delete_this_line/</projectUrl>
+    <iconUrl>http://icon_url_here_or_delete_this_line/</iconUrl>
+    <description>AnalyzerDev</description>
+    <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
+    <copyright>Copyright</copyright>
+    <tags>AnalyzerDev, analyzers</tags>
+    <repository url="http://REPOSITORY_URL_HERE_OR_DELETE_THIS_LINE" />
+    <dependencies>
+      <group targetFramework=".NETStandard1.3" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\ProjectsSandbox\AnalyzerDev\AnalyzerDev\tools\install.ps1" target="tools\install.ps1" />
+    <file src="C:\ProjectsSandbox\AnalyzerDev\AnalyzerDev\tools\uninstall.ps1" target="tools\uninstall.ps1" />
+    <file src="C:\ProjectsSandbox\AnalyzerDev\AnalyzerDev\bin\Debug\netstandard1.3\AnalyzerDev.dll" target="analyzers\dotnet\cs\AnalyzerDev.dll" />
+  </files>
+</package>

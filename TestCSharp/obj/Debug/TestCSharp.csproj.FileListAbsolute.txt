@@ -1,0 +1,6 @@
+C:\ProjectsSandbox\AnalyzerDev\TestCSharp\bin\Debug\ConsoleApp1.exe.config
+C:\ProjectsSandbox\AnalyzerDev\TestCSharp\bin\Debug\ConsoleApp1.exe
+C:\ProjectsSandbox\AnalyzerDev\TestCSharp\bin\Debug\ConsoleApp1.pdb
+C:\ProjectsSandbox\AnalyzerDev\TestCSharp\obj\Debug\TestCSharp.csprojAssemblyReference.cache
+C:\ProjectsSandbox\AnalyzerDev\TestCSharp\obj\Debug\ConsoleApp1.exe
+C:\ProjectsSandbox\AnalyzerDev\TestCSharp\obj\Debug\ConsoleApp1.pdb
