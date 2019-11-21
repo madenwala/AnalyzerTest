@@ -1,15 +1,8 @@
-//using Analyzer.Utilities;
-using AnalyzerDev;
 using Microsoft.CodeAnalysis;
-using Microsoft.CodeAnalysis.CSharp;
-using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using Microsoft.CodeAnalysis.Operations;
 using System;
-using System.Collections.Concurrent;
 using System.Collections.Immutable;
-using System.Diagnostics;
-using System.Threading.Tasks;
 
 namespace AnalyzerDev
 {
@@ -32,57 +25,68 @@ namespace AnalyzerDev
             // Old C# way to do this
             //context.RegisterSyntaxNodeAction(CSharpAnalyzeSyntax, SyntaxKind.ObjectCreationExpression);
 
-
             context.EnableConcurrentExecution();
             context.ConfigureGeneratedCodeAnalysis(GeneratedCodeAnalysisFlags.None);
             context.RegisterCompilationStartAction(compilationContext =>
             {
                 compilationContext.RegisterOperationAction(operationContext =>
                 {
+                    // Ensure that a new object is being created
                     if (operationContext.Operation.Kind != OperationKind.ObjectCreation)
+                    {
                         return;
+                    }
 
+                    // Ensure TaskCompletionSource type is available
+                    var taskType = compilationContext.Compilation.GetTypeByMetadataName(WellKnownTypeNames.SystemThreadingTasksTaskCompletionSource);
+                    if (taskType == null)
+                    {
+                        return;
+                    }
+
+                    // Ensure that you're using the TaskCompletionSource constructor with the object state property else exit
                     var invocation = (IObjectCreationOperation)operationContext.Operation;
-
-                    var type = compilationContext.Compilation.GetTypeByMetadataName(WellKnownTypeNames.SystemThreadingTasksTaskCompletionSource);
-                    if (!invocation.Type.OriginalDefinition.Equals(type))
-                        return;
-                    if (invocation.Arguments.Length != 1)
-                        return;
-                    if (!invocation.Constructor.Parameters[0].Type.Name.Equals(nameof(Object), StringComparison.OrdinalIgnoreCase))
-                        return;
-                    var arg = invocation.Arguments[0] as IArgumentOperation;
-
-
-                    // TODO Replace if-then below to avoid expressions from the C# namespaces 
-
-                    if(arg.Value.Syntax != null)
-                    //if (argumentList.Arguments[0].Expression is MemberAccessExpressionSyntax argExpression
-                    //    && context.SemanticModel.GetSymbolInfo(argExpression).Symbol is ISymbol argSymbol
-                    //    && argSymbol.ContainingType.Name.Equals(nameof(TaskContinuationOptions), StringComparison.OrdinalIgnoreCase))
+                    if (invocation == null
+                    || !invocation.Type.OriginalDefinition.Equals(taskType)
+                    || invocation.Arguments.Length != 1
+                    || !invocation.Constructor.Parameters[0].Type.Name.Equals(nameof(Object), StringComparison.OrdinalIgnoreCase))
                     {
-                        // TODO uncomment after you get the expression
-                        // SendDiagnostic(context, argExpression);
-                    }
-                    else if(true) // TODO Replace with expression from below
-                    //else if (argumentList.Arguments[0].Expression is IdentifierNameSyntax nameExpression
-                    //    && context.SemanticModel.GetSymbolInfo(nameExpression).Symbol is ILocalSymbol nameSymbol
-                    //    && nameSymbol.Type.Name.Equals(nameof(TaskContinuationOptions), StringComparison.OrdinalIgnoreCase))
-                    {
-                        // TODO uncomment after you get the expression
-                        // TODO SendDiagnostic(context, nameExpression);
+                        return;
                     }
 
+                    // Check to see if argument is a conversion operator
+                    if (invocation.Arguments[0] is IArgumentOperation arg
+                    && arg.Value.Kind == OperationKind.Conversion
+                    && arg.Value is IConversionOperation conversionOperation)
+                    {
+                        // Check to see if its a field reference or passed in via reference
+                        if (conversionOperation.Operand.Kind == OperationKind.FieldReference
+                        || conversionOperation.Operand.Kind == OperationKind.LocalReference)
+                        {
+                            // Ensure TaskContinuationOptions is available
+                            var taskContinutationOptionsType = compilationContext.Compilation.GetTypeByMetadataName(WellKnownTypeNames.SystemThreadingTasksTaskContinuationOptions);
+                            if (taskContinutationOptionsType == null)
+                            {
+                                return;
+                            }
+
+                            // If the operand is TaskContinuationOptions then report diagnostic
+                            if (conversionOperation.Operand.Type.Equals(taskContinutationOptionsType))
+                            {
+                                operationContext.ReportDiagnostic(Diagnostic.Create(Rule, conversionOperation.Syntax.GetLocation(), invocation.ToString())); // TODO update last param
+                            }
+                        }
+                    }
                 }, OperationKind.ObjectCreation);
                 });
         }
 
-        private void SendDiagnostic(SyntaxNodeAnalysisContext context, ExpressionSyntax exp)
-        {
-            // All tests have passed, report bug
-            var diagnostic = Diagnostic.Create(Rule, exp.GetLocation());
-            context.ReportDiagnostic(diagnostic);
-        }
+        //private void SendDiagnostic(SyntaxNodeAnalysisContext context, ExpressionSyntax exp)
+        //{
+        //     All tests have passed, report bug
+        //    var diagnostic = Diagnostic.Create(Rule, exp.GetLocation());
+        //    context.ReportDiagnostic(diagnostic);
+        //}
 
         //private void CSharpAnalyzeSyntax(SyntaxNodeAnalysisContext context)
         //{
