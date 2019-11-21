@@ -114,5 +114,32 @@ namespace AnalyzerDev {
                 return ResourceManager.GetString("DoNotCreateTaskCompletionSourceWithWrongParametersTitle", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Argument &apos;{0}&apos; should be a char instead of a string..
+        /// </summary>
+        internal static string StringBuilderAppendArgumentsDescription {
+            get {
+                return ResourceManager.GetString("StringBuilderAppendArgumentsDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Argument contains a string that could be a char..
+        /// </summary>
+        internal static string StringBuilderAppendArgumentsMessage {
+            get {
+                return ResourceManager.GetString("StringBuilderAppendArgumentsMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Argument contains a string that could be a char..
+        /// </summary>
+        internal static string StringBuilderAppendArgumentsTitle {
+            get {
+                return ResourceManager.GetString("StringBuilderAppendArgumentsTitle", resourceCulture);
+            }
+        }
     }
 }

@@ -138,4 +138,13 @@
   <data name="DoNotCreateTaskCompletionSourceWithWrongParametersTitle" xml:space="preserve">
     <value>Parameter contains TaskContinuationsOptions instead of TaskCreationOptions.</value>
   </data>
+  <data name="StringBuilderAppendArgumentsDescription" xml:space="preserve">
+    <value>Argument '{0}' should be a char instead of a string.</value>
+  </data>
+  <data name="StringBuilderAppendArgumentsMessage" xml:space="preserve">
+    <value>Argument contains a string that could be a char.</value>
+  </data>
+  <data name="StringBuilderAppendArgumentsTitle" xml:space="preserve">
+    <value>Argument contains a string that could be a char.</value>
+  </data>
 </root>
