@@ -15,6 +15,16 @@ Class T
         tcs = New TaskCompletionSource(Of Integer)(CInt(TaskContinuationOptions.RunContinuationsAsynchronously))
         Dim invalidEnum As TaskContinuationOptions = TaskContinuationOptions.RunContinuationsAsynchronously
         tcs = New TaskCompletionSource(Of Integer)(invalidEnum) ' Invalid
+        tcs = New TaskCompletionSource(Of Integer)(NewProperty) ' Invalid
 
     End Sub
+    Private myPropery As TaskContinuationOptions
+    Public Property NewProperty() As TaskContinuationOptions
+        Get
+            Return myPropery
+        End Get
+        Set(ByVal value As TaskContinuationOptions)
+            myPropery = value
+        End Set
+    End Property
 End Class

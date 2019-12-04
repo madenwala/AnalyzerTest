@@ -6,5 +6,6 @@
         public const string SystemThreadingTasksTaskContinuationOptions = "System.Threading.Tasks.TaskContinuationOptions";
         public const string SystemString = "System.String";
         public const string SystemTextStringBuilder = "System.Text.StringBuilder";
+        public const string SystemObject = "System.Object";
     }
 }
